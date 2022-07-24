@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Next Home</title>
+        {% load static %}
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        
+    </head>
+    <body>
+ 
+        <div class="wrapper">
+            <div id="content">
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+
+                        <div id="navbarCollapse"  class="collapse navbar-collapse" >
+                          <a href="index.html"></a>
+
+                          <a href="#"><span class="fa fa-fw fa-home"></span> Home</a>
+                          <a href="index2.html"><span class="fa fa-user mr-3"></span>     About</a>
+                          <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+
+                          <form class="nav navbar-form navbar-left">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                          </form> 
+                            
+                            
+                          <ul class="nav navbar-nav navbar-right">
+                              <li><a href="https://www.instagram.com/ybhupesh_bc/"><span class="fa fa-cart-plus"></span></a></li>
+                              <li><a href="{% url 'login'}"><span class="fa fa-sign-out"></span></a></li>
+                          </ul>
+
+                          <a href="{% url 'logout' %}"class="btn btn-primary">Logout</a>
+
+                            
+                                
+                            
+                        </div>
+                    </div>
+                </nav>
+
+                
+               
+                
+            </div>
+            <Footer>
+                <div class="content">
+                  <div class="left box">
+
+                    <div class="lower">
+                      <div class="topic">Contact us</div>
+                      <div class="phone">
+                        <a href="#"><i class="fas fa-phone-volume"></i>9812485870</a>
+                      </div>
+                      <div class="email">
+                        <a href="#"><i class="fas fa-envelope"></i>bhupeshbc12@gmail.com</a>
+                      </div>
+                     
+                    </div>
+                  </div>
+                  <!-- <div class="middle box">
+                    <div class="topic">Our Services</div>
+                    <div><a href="#">tasty foods</a></div>
+                    <div><a href="#">High security</a></div>
+                    <div><a href="#">clean rooms</a></div>
+                  </div> -->
+            
+                  <div class="right box">
+
+
+
+                    <div class="topic">Give suggestions!!</div>
+                    <form action="#">
+                      <textarea rows = "5" cols = "60" name = "description">
+                     </textarea><br> </form>
+                      <input type="submit" name="" value="Send">
+                  </div>
+                <div class="bottom">
+                    <p>Copyright © 2020 <a href="#">GamingStorm</a> All rights reserved</p>
+                  </div>
+                </div>
+               
+              </Footer>
+            
+            
+        </div>
+        
+
+
+
+
+
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!-- Bootstrap Js CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- jQuery Custom Scroller CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/app.js"></script>
+        
+    </body>
+</html>
