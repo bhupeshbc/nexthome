@@ -1,5 +1,5 @@
 from django.contrib import admin
-from rooms.models import rooms
+from rooms.models import room
 
 
 # Register your models here.
@@ -8,4 +8,4 @@ from rooms.models import rooms
 
 
 
-admin.site.register(rooms)
+admin.site.register(room)
