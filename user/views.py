@@ -3,47 +3,47 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, logout, login as auth_login
 import rooms
 
-# def register(request):
-#     print(request.method)
-#     if request.method =='POST':
-#         User.objects.create_user(
-#             first_name=request.POST['firstname'],
-#             last_name=request.POST['lastname'],
-#             email=request.POST['email'],
-#             username=request.POST['username'],
-#             password=request.POST['password'],
+def register(request):
+    print(request.method)
+    if request.method =='POST':
+        User.objects.create_user(
+            first_name=request.POST['firstname'],
+            last_name=request.POST['lastname'],
+            email=request.POST['email'],
+            username=request.POST['username'],
+            password=request.POST['password'],
    
-#         )
-#         return redirect('login')
+        )
+        return redirect('login')
         
-#     else:
-#         return render(request, 'register.html')
-
-# def login(request):
-#     if request.method == 'POST':
-   
-#         user=authenticate(request, 
-#         username =request.POST['username'],
-#         password =request.POST['password'],
-#         )
-#         if user is not None:
-#             auth_login(request, user)
-#             return redirect('home')
-#         else:
-#             return redirect('login')
-        
-#     else:
-#         return render(request, 'login.html')
-    
-
-# def logout_view(request):
-#     logout(request)
-#     return redirect('login')
+    else:
+        return render(request, 'register.html')
 
 def login(request):
-    return render(request, "login.html")
+    if request.method == 'POST':
+   
+        user=authenticate(request, 
+        username =request.POST.get('username'),
+        password =request.POST.get('password')
+        )
+        if user is not None:
+            auth_login(request, user)
+            return redirect('home')
+        else:
+            return redirect('login')
+        
+    else:
+        return render(request, 'login.html')
+    
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
+
+# def login(request):
+#     return render(request, "login.html")
 
 
-def register(request):
-    return render(request, "register.html")
+# def register(request):
+#     return render(request, "register.html")
     
