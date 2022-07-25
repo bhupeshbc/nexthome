@@ -9,7 +9,7 @@ class room(models.Model):
     floor = models.IntegerField()
     price = models.IntegerField()
     description = models.TextField()
-    image = models.ImageField(upload_to='rooms/')
+    image = models.ImageField(upload_to='rooms/images/', blank=True)
 
     def __str__(self):
         return self.name
